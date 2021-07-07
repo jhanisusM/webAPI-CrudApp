@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Definition, new { @class = "font-weight-bold" })
-                @Html.TextBoxFor(model => model.Definition, new { @class = "form-control", placeholder = "Enter Definition" })
+                @Html.TextAreaFor(model => model.Definition, new { @class = "form-control", placeholder = "Enter Definition", rows = "6"})
                 <div style="color:red">
                     @Html.ValidationMessageFor(model => model.Definition)
                 </div>

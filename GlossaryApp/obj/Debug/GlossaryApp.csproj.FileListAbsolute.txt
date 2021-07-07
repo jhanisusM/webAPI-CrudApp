@@ -171,7 +171,6 @@ C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\bin\System.Web.WebPages.De
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\bin\System.Web.WebPages.Razor.xml
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\bin\Antlr3.Runtime.pdb
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\obj\Debug\GlossaryApp.csproj.AssemblyReference.cache
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\obj\Debug\GlossaryApp.csproj.CoreCompileInputs.cache
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\obj\Debug\GlossaryApp.csproj.CopyComplete
 C:\Users\User\Source\Repos\webAPI-CrudApp\GlossaryApp\obj\Debug\GlossaryApp.dll

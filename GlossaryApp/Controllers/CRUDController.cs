@@ -25,12 +25,16 @@ namespace GlossaryApp.Controllers
             {
                 //GET
                 var consumeAPI = RESTfulAPI.httpRequest.GetAsync("Glossary/" + id.ToString()).Result;
-                return View(consumeAPI.Content.ReadAsAsync<TermModel>().Result);
+                var termDef = consumeAPI.Content.ReadAsAsync<TermModel>().Result as TermModel;
+                termDef.Term = termDef.Term.Trim();
+                termDef.Definition = termDef.Definition.Trim();
+                return View(termDef);
             }
         }
         [HttpPost]
         public ActionResult AddOrEdit(TermModel termModel)
         {
+
             if (termModel == null)
             {
                 TempData["AlertMsg"] = "Please enter a term and its definition.";

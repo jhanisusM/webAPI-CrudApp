@@ -11,7 +11,7 @@ namespace GlossaryApp.Models
         public int TermID { get; set; }
         [Required(ErrorMessage = "Term field is required.")]
         public string Term { get; set; }
-        [Required(ErrorMessage = "Definition field is required.")]
+        [Required(ErrorMessage = "Definition field is required."), MaxLength(250)]
         public string Definition { get; set; }
     }
 }
