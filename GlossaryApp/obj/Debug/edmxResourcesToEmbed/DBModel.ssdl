@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GlossaryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Glossary">
+    <Key>
+      <PropertyRef Name="TermID" />
+    </Key>
+    <Property Name="TermID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Term" Type="nchar" MaxLength="100" />
+    <Property Name="Definition" Type="nchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="GlossaryModelStoreContainer">
+    <EntitySet Name="Glossary" EntityType="Self.Glossary" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

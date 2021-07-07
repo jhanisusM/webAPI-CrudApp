@@ -1,0 +1,46 @@
+﻿@model IEnumerable<GlossaryApp.Models.TermModel>
+<div class="jumbotron">
+    <h1>
+        Glossary
+    </h1>
+    <h5>
+        (Candidate Evaluation Test)
+    </h5>
+    <p class="lead">
+        This is an application that utilizes a web API with SQL as its persistent data strorage in the backend, coupled with MVC for the front end. This application also uses using HTML, CSS, and JavaScript.
+    </p>
+</div>
+<hr />
+@if (Model.Any())
+{
+    string headerCSS;
+    char headerChar;
+    char currentChar;
+    char previousChar = ' ';
+
+    foreach (var item in Model)
+    {
+        currentChar = item.Term.FirstOrDefault();
+        headerChar = currentChar != previousChar ? currentChar : ' ';
+        headerCSS = currentChar != previousChar ? "font-italic list-group-item list-group-item-dark" : string.Empty;
+        <h4 class="@headerCSS">@headerChar</h4>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Term)</h5>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Definition)</p>
+            </div>
+        </div>
+        <br/>
+        previousChar = currentChar;
+    }
+}
+else
+{
+    <div class="row">
+        <div class="col">
+            <p class="card-text">No results found.</p>
+        </div>
+    </div>
+}
+
+
